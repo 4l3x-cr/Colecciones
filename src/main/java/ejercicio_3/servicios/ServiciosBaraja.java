@@ -23,6 +23,8 @@ import java.util.*;
 
 public class ServiciosBaraja {
 
+    List <Baraja> cartas = new ArrayList(); 
+    
     
     public void barajar() {
         HashSet<Baraja> mazo = new HashSet();
@@ -61,15 +63,38 @@ public class ServiciosBaraja {
         }
         ArrayList<Baraja> mazoList = new ArrayList(mazo);
         Collections.shuffle(mazoList);
-        mazoList.forEach(System.out::println);
+        cartas = mazoList; 
+        cartas.forEach(System.out::println); // <---- PROVISIONAL, muestra la baraja completa
     }
 
+    public void repartir_cartas() {
+            //darCartas(): dado un número de cartas que nos pidan, le devolveremos ese número de
+    //cartas. En caso de que haya menos cartas que las pedidas, no devolveremos nada, pero
+    //debemos indicárselo al usuario.
+    // Lista, variable n según el n de cartas a repartir (= posición), ciclo p/ añadir y remover, 
+        
+    
+    
+        cartas.equals(0);
+        //cartas.add(e)
+        cartas.remove(0);
+    
+    
+    }
+    
+    
     public void siguiente_carta() {
-        // siguienteCarta(): devuelve la siguiente carta que está en la baraja, cuando no haya más o
-        // se haya llegado al final, se indica al usuario que no hay más cartas.
-        HashSet <Baraja> mazo = new HashSet();
-        mazo.getClass();
-        System.out.println(mazo);
+        
+        //Iterator itCartas = cartas.iterator();
+        //while (itCartas.hasNext()) {
+          //  System.out.println(itCartas.next());
+        //}
+        if (!cartas.isEmpty()) {
+            System.out.println(cartas.get(0));
+        } else if (cartas.size()>40) {
+            System.out.println("Ya no hay cartas");
+        }
+        
     }
     
 }

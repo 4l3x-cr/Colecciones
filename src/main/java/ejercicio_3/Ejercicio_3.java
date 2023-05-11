@@ -14,6 +14,8 @@ public class Ejercicio_3 {
         
         
         sb.barajar();
+        System.out.println("________________________");
+        sb.siguiente_carta();
     }
     
 }
